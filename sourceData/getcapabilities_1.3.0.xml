@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" version="1.3.0" updateSequence="611" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://geodata.rbwm.gov.uk:80/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>RBWM WMS</Title>
+    <Abstract>Royal Borough of Windsor and Maidenhead Web Mapping Service for Inspire</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+      <Keyword>RBWM</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://mol.rbwm.gov.uk/mol/geoserver"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Development Team</ContactPerson>
+        <ContactOrganization>Royal Borough of Windsor and Maidenhead</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Development Officer</ContactPosition>
+      <ContactAddress>
+        <AddressType>Work</AddressType>
+        <Address>Town Hall, St Ives Road</Address>
+        <City>Maidenhead</City>
+        <StateOrProvince>Berkshire</StateOrProvince>
+        <PostCode>SL6 1RF</PostCode>
+        <Country>United Kingdom</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>gisopsteam@rbwm.gov.uk</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+    </Exception>
+    <inspire_vs:ExtendedCapabilities>
+      <inspire_common:MetadataUrl>
+        <inspire_common:URL>https://data.gov.uk/search?q=&amp;filters%5Bpublisher%5D=Royal+Borough+of+Windsor+and+Maidenhead&amp;filters%5Btopic%5D=Mapping&amp;filters%5Bformat%5D=&amp;sort=best</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      </inspire_common:MetadataUrl>
+      <inspire_common:SupportedLanguages>
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>eng</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>eng</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+    </inspire_vs:ExtendedCapabilities>
+    <Layer>
+      <Title>Royal Borough of Windsor and Maidenhead</Title>
+      <Abstract>The Royal Borough of Windsor and Maidenhead is a Local Authority within Berkshire, United Kingdom.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:27700</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-0.9583925640816631</westBoundLongitude>
+        <eastBoundLongitude>-0.5182463518314683</eastBoundLongitude>
+        <southBoundLatitude>51.38106930638266</southBoundLatitude>
+        <northBoundLatitude>51.579163288387065</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-0.9583925640816631" miny="51.38106930638266" maxx="-0.5182463518314683" maxy="51.579163288387065"/>
+      <AuthorityURL name="Royal Borough or Windsor and Maidenhead">
+        <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+      </AuthorityURL>
+      <Identifier authority="Royal Borough or Windsor and Maidenhead">E06000040</Identifier>
+      <Layer queryable="1" opaque="1">
+        <Name>alcohol_free_zones</Name>
+        <Title>alcohol_free_zones</Title>
+        <Abstract>Areas within the Royal Borough of Windsor and Maidenhead where the consumption of alcohol is prohibited in a public place.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>alcohol_free_zones</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Human Health and Safety</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7796409033283274</westBoundLongitude>
+          <eastBoundLongitude>-0.5681178695639066</eastBoundLongitude>
+          <southBoundLatitude>51.39881503643179</southBoundLatitude>
+          <northBoundLatitude>51.55879427110977</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7796409033283274" miny="51.39881503643179" maxx="-0.5681178695639066" maxy="51.55879427110977"/>
+        <BoundingBox CRS="EPSG:27700" minx="484989.257366832" miny="167608.219298823" maxx="499365.263579832" maxy="185145.015301823"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000015</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Alcohol_Control_Zones.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>alcohol_free_zones</Name>
+          <Title>alcohol_free_zones</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=alcohol_free_zones"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>alcohol_free_zones</Name>
+          <Title>alcohol_free_zones</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=alcohol_free_zones&amp;style=alcohol_free_zones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>allotments</Name>
+        <Title>allotments</Title>
+        <Abstract>Location and the organisations that maintain allotments within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>allotments</Keyword>
+          <Keyword>Agriculture and Aquaculture</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Human Health and Safety</Keyword>
+          <Keyword>Land Use</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7685875332655936</westBoundLongitude>
+          <eastBoundLongitude>-0.5740449434073991</eastBoundLongitude>
+          <southBoundLatitude>51.39607633658895</southBoundLatitude>
+          <northBoundLatitude>51.5648186458501</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7685875332655936" miny="51.39607633658895" maxx="-0.5740449434073991" maxy="51.5648186458501"/>
+        <BoundingBox CRS="EPSG:27700" minx="485763.615994188" miny="167295.300000015" maxx="498940.899993188" maxy="185828.209999015"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000010</Identifier>
+        <MetadataURL type="other">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://data.gov.uk/harvest/gemini-object/d2ba15e2-ffea-4f7f-bb5a-bfca1458977c"/>
+        </MetadataURL>
+        <Style>
+          <Name>allotments</Name>
+          <Title>allotments</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=allotments"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>allotments</Name>
+          <Title>allotments</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=allotments&amp;style=allotments"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>aqma_rbwm</Name>
+        <Title>aqma_rbwm</Title>
+        <Abstract>The Royal Borough of Windsor and Maidenhead assessment of air quality has declared Air Quality Management Areas (AQMA) for the towns of Windsor, Bray, and Maidenhead. These areas are monitored and this dataset is part of the Local Air Quality Action Plan.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>aqma_rbwm</Keyword>
+          <Keyword>Atmospheric Conditions</Keyword>
+          <Keyword>Environment Monitoring</Keyword>
+          <Keyword>Human Health and Safety</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7312716547166026</westBoundLongitude>
+          <eastBoundLongitude>-0.5246807496665025</eastBoundLongitude>
+          <southBoundLatitude>51.43943452766771</southBoundLatitude>
+          <northBoundLatitude>51.52685749998869</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7312716547166026" miny="51.43943452766771" maxx="-0.5246807496665025" maxy="51.52685749998869"/>
+        <BoundingBox CRS="EPSG:27700" minx="488275.592102497" miny="172188.148492148" maxx="502448.209277821" maxy="181648.29009961"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000011</Identifier>
+        <MetadataURL type="other">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://data.gov.uk/harvest/gemini-object/be5b4399-da51-48a7-8850-8e9263c2198a"/>
+        </MetadataURL>
+        <Style>
+          <Name>air_quality</Name>
+          <Title>air_quality</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=aqma_rbwm"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>air_quality</Name>
+          <Title>air_quality</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=aqma_rbwm&amp;style=air_quality"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>cemeteries_churchyards</Name>
+        <Title>cemeteries_churchyards</Title>
+        <Abstract>Location of cemeteries and churchyards within the Royal Borough of Windsor and Maidenhead that are maintained by the council</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>cemeteries_churchyards</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Human Health and Safety</Keyword>
+          <Keyword>Land Use</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8144232343639062</westBoundLongitude>
+          <eastBoundLongitude>-0.5615617923249542</eastBoundLongitude>
+          <southBoundLatitude>51.39773382929267</southBoundLatitude>
+          <northBoundLatitude>51.56302045861277</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8144232343639062" miny="51.39773382929267" maxx="-0.5615617923249542" maxy="51.56302045861277"/>
+        <BoundingBox CRS="EPSG:27700" minx="482570.910001053" miny="167496.640000221" maxx="499811.472996053" maxy="185575.239999221"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000026</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Cemeteries_Churchyards.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>cemeteries</Name>
+          <Title>cemeteries</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=cemeteries_churchyards"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>cemeteries</Name>
+          <Title>cemeteries</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=cemeteries_churchyards&amp;style=cemeteries"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>conservation_areas</Name>
+        <Title>conservation_areas</Title>
+        <Abstract>Conservation areas within the Royal Borough of Windsor and Maidenhead that have special architectural or historic character which are to be preserved.</Abstract>
+        <KeywordList>
+          <Keyword>conservation_areas</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8211629590673012</westBoundLongitude>
+          <eastBoundLongitude>-0.5663914178708043</eastBoundLongitude>
+          <southBoundLatitude>51.39649640280695</southBoundLatitude>
+          <northBoundLatitude>51.573092843974756</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8211629590673012" miny="51.39649640280695" maxx="-0.5663914178708043" maxy="51.573092843974756"/>
+        <BoundingBox CRS="EPSG:27700" minx="482104.28125" miny="167352.015625" maxx="499454.75" maxy="186688.140625"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000016</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Conservation_Areas.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>conservation_areas</Name>
+          <Title>conservation_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=conservation_areas"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>conservation_areas</Name>
+          <Title>conservation_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=conservation_areas&amp;style=conservation_areas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>council_buildings</Name>
+        <Title>council_buildings</Title>
+        <Abstract>The dataset shows the location of councils administrative buildings.</Abstract>
+        <KeywordList>
+          <Keyword>council_buildings</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Buildings</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.719794925260832</westBoundLongitude>
+          <eastBoundLongitude>-0.6046660327659523</eastBoundLongitude>
+          <southBoundLatitude>51.47699217716951</southBoundLatitude>
+          <northBoundLatitude>51.52308792680266</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.719794925260832" miny="51.47699217716951" maxx="-0.6046660327659523" maxy="51.52308792680266"/>
+        <BoundingBox CRS="EPSG:27700" minx="489002.334998" miny="176258.002998" maxx="496905.091998" maxy="181241.617998"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000012</Identifier>
+        <MetadataURL type="other">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://data.gov.uk/harvest/gemini-object/a7d996d4-c9f6-4659-b7b9-c80001d025a4"/>
+        </MetadataURL>
+        <Style>
+          <Name>council_buildings</Name>
+          <Title>council_buildings</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=council_buildings"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>council_buildings</Name>
+          <Title>council_buildings</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=council_buildings&amp;style=council_buildings"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>existing_mineral_sites</Name>
+        <Title>existing_mineral_sites</Title>
+        <Abstract>Existing Mineral Extraction sites within the Royal Borough of Windsor and Maidenhead.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>existing_mineral_sites</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7157648028095502</westBoundLongitude>
+          <eastBoundLongitude>-0.5740940935910775</eastBoundLongitude>
+          <southBoundLatitude>51.48959156412179</southBoundLatitude>
+          <northBoundLatitude>51.53544726709732</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7157648028095502" miny="51.48959156412179" maxx="-0.5740940935910775" maxy="51.53544726709732"/>
+        <BoundingBox CRS="EPSG:27700" minx="489257.0" miny="177700.0" maxx="499000.0" maxy="182621.0"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000025</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Existing_Mineral_Sites.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>existing_mineral_sites</Name>
+          <Title>existing_mineral_sites</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=existing_mineral_sites"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>existing_mineral_sites</Name>
+          <Title>existing_mineral_sites</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=existing_mineral_sites&amp;style=existing_mineral_sites"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=existing_mineral_sites&amp;style=point"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>landscape_character_assessment</Name>
+        <Title>landscape_character_assessment</Title>
+        <Abstract>A baseline study of landscape character within the Royal Borough of Windsor and Maidenhead. The study identifies landscape types and areas.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>landscape_character_assessment</Keyword>
+          <Keyword>Bio-geographical Regions</Keyword>
+          <Keyword>Land Use</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8574292464422948</westBoundLongitude>
+          <eastBoundLongitude>-0.5182463518314683</eastBoundLongitude>
+          <southBoundLatitude>51.382238890389246</southBoundLatitude>
+          <northBoundLatitude>51.579163288387065</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8574292464422948" miny="51.382238890389246" maxx="-0.5182463518314683" maxy="51.579163288387065"/>
+        <BoundingBox CRS="EPSG:27700" minx="479604.500006418" miny="165831.702994511" maxx="502779.812986418" maxy="187323.594024511"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000013</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://data.gov.uk/harvest/gemini-object/05542c15-87df-4e61-b9de-28d7f490966c"/>
+        </MetadataURL>
+        <Style>
+          <Name>landscape_character_assessment</Name>
+          <Title>landscape_character_assessment</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=landscape_character_assessment"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>landscape_character_assessment</Name>
+          <Title>landscape_character_assessment</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=landscape_character_assessment&amp;style=landscape_character_assessment"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>library_locations</Name>
+        <Title>library_locations</Title>
+        <Abstract>Location of static, mobile and container libraries within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>library_locations</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8360007242494236</westBoundLongitude>
+          <eastBoundLongitude>-0.531687326341918</eastBoundLongitude>
+          <southBoundLatitude>51.38801229590649</southBoundLatitude>
+          <northBoundLatitude>51.565062945500976</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8360007242494236" miny="51.38801229590649" maxx="-0.531687326341918" maxy="51.565062945500976"/>
+        <BoundingBox CRS="EPSG:27700" minx="481086.0625" miny="166455.953125" maxx="501879.0625" maxy="185778.515625"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000030</Identifier>
+        <Style>
+          <Name>libraries</Name>
+          <Title>libraries</Title>
+          <LegendURL width="121" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=library_locations"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>libraries</Name>
+          <Title>libraries</Title>
+          <LegendURL width="121" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=library_locations&amp;style=libraries"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>listed_buildings</Name>
+        <Title>listed_buildings</Title>
+        <Abstract>The data shows the buildings within the Royal Borough of Windsor and Maidenhead that have been given Listed Building status and are subject to planning regulations. These building are protected for future generations due to their historic or special architectural interest.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>listed_buildings</Keyword>
+          <Keyword>Buildings</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8468424756606331</westBoundLongitude>
+          <eastBoundLongitude>-0.5306556271505194</eastBoundLongitude>
+          <southBoundLatitude>51.38558210196649</southBoundLatitude>
+          <northBoundLatitude>51.575929589994395</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8468424756606331" miny="51.38558210196649" maxx="-0.5306556271505194" maxy="51.575929589994395"/>
+        <BoundingBox CRS="EPSG:27700" minx="480335.779998793" miny="166186.539995933" maxx="501926.559999745" maxy="186975.400004295"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000014</Identifier>
+        <MetadataURL type="other">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://data.gov.uk/harvest/gemini-object/2ab86e34-c9da-49c0-872d-71bb2e454f92"/>
+        </MetadataURL>
+        <Style>
+          <Name>listed_buildings</Name>
+          <Title>listed_buildings</Title>
+          <LegendURL width="94" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=listed_buildings"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>listed_buildings</Name>
+          <Title>listed_buildings</Title>
+          <LegendURL width="94" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=listed_buildings&amp;style=listed_buildings"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>lp_green_belt</Name>
+        <Title>lp_green_belt</Title>
+        <Abstract>Royal Borough of Windsor and Maidenhead Green Belt</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lp_green_belt</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.85743129898525</westBoundLongitude>
+          <eastBoundLongitude>-0.5182484538588531</eastBoundLongitude>
+          <southBoundLatitude>51.38223288300893</southBoundLatitude>
+          <northBoundLatitude>51.57915743577284</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.85743129898525" miny="51.38223288300893" maxx="-0.5182484538588531" maxy="51.57915743577284"/>
+        <BoundingBox CRS="EPSG:27700" minx="479604.3676" miny="165831.032" maxx="502779.6805" maxy="187322.9409"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000017</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-green_belt.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>greenbelt</Name>
+          <Title>A dark yellow polygon style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lp_green_belt"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>greenbelt</Name>
+          <Title>A dark yellow polygon style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=lp_green_belt&amp;style=greenbelt"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>minerals_waste_draft_plan_sites</Name>
+        <Title>minerals_waste_draft_plan_sites</Title>
+        <Abstract>Draft plan of mineral extraction and waste management sites within the Royal Borough of Windsor and Maidenhead.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>minerals_waste_draft_plan_sites</Keyword>
+          <Keyword>Energy Resources</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.9583925640816631</westBoundLongitude>
+          <eastBoundLongitude>-0.5229478878616718</eastBoundLongitude>
+          <southBoundLatitude>51.38106930638266</southBoundLatitude>
+          <northBoundLatitude>51.52781204375509</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.9583925640816631" miny="51.38106930638266" maxx="-0.5229478878616718" maxy="51.52781204375509"/>
+        <BoundingBox CRS="EPSG:27700" minx="472579.3792" miny="165697.3949" maxx="502571.34" maxy="181506.140000001"/>
+        <Style>
+          <Name>minerals_waste</Name>
+          <Title>minerals_waste</Title>
+          <LegendURL width="127" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=minerals_waste_draft_plan_sites"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>minerals_waste</Name>
+          <Title>minerals_waste</Title>
+          <LegendURL width="127" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=minerals_waste_draft_plan_sites&amp;style=minerals_waste"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>notified_hazards</Name>
+        <Title>notified_hazards</Title>
+        <Abstract>Sites that proposes a major man made hazard or danger within the Royal Borough of Windsor and Maidenhead and must be consulted before any nearby development.</Abstract>
+        <KeywordList>
+          <Keyword>notified_hazards</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Area Management</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7867100443926054</westBoundLongitude>
+          <eastBoundLongitude>-0.6223381079003979</eastBoundLongitude>
+          <southBoundLatitude>51.39800743640407</southBoundLatitude>
+          <northBoundLatitude>51.554255477341044</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7867100443926054" miny="51.39800743640407" maxx="-0.6223381079003979" maxy="51.554255477341044"/>
+        <BoundingBox CRS="EPSG:27700" minx="484500.055" miny="167446.758" maxx="495614.786999" maxy="184631.942"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000018</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-notified_hazards_inspire.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>notified_hazards</Name>
+          <Title>notified_hazards</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=notified_hazards"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>notified_hazards</Name>
+          <Title>notified_hazards</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=notified_hazards&amp;style=notified_hazards"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="1">
+        <Name>open_spaces_rbwm_owned</Name>
+        <Title>open_spaces_rbwm_owned</Title>
+        <Abstract>Royal Borough of Windsor and Maidenhead owned and maintained public open spaces for recreation purposes.</Abstract>
+        <KeywordList>
+          <Keyword>open_spaces_rbwm_owned</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Habitat abd Biotopes</Keyword>
+          <Keyword>Land Use</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7689383407832616</westBoundLongitude>
+          <eastBoundLongitude>-0.5566318221128493</eastBoundLongitude>
+          <southBoundLatitude>51.45865348814391</southBoundLatitude>
+          <northBoundLatitude>51.538221404943414</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7689383407832616" miny="51.45865348814391" maxx="-0.5566318221128493" maxy="51.538221404943414"/>
+        <BoundingBox CRS="EPSG:27700" minx="485621.849974144" miny="174281.719097037" maxx="500206.771780144" maxy="182867.049913037"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000020</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Owned_Open_Spaces.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>open_spaces_rbwm</Name>
+          <Title>open_spaces_rbwm</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=open_spaces_rbwm_owned"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>open_spaces_rbwm</Name>
+          <Title>open_spaces_rbwm</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=open_spaces_rbwm_owned&amp;style=open_spaces_rbwm"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>play_areas</Name>
+        <Title>play_areas</Title>
+        <Abstract>Children's play grounds and play areas within the borough that are maintained by the Royal Borough of Windsor and Maidenhead.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>play_areas</Keyword>
+          <Keyword>Area Management</Keyword>
+          <Keyword>Land Use</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8162618120361314</westBoundLongitude>
+          <eastBoundLongitude>-0.5547321192397715</eastBoundLongitude>
+          <southBoundLatitude>51.41470296232028</southBoundLatitude>
+          <northBoundLatitude>51.55659561301842</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8162618120361314" miny="51.41470296232028" maxx="-0.5547321192397715" maxy="51.55659561301842"/>
+        <BoundingBox CRS="EPSG:27700" minx="482412.34375" miny="169394.015625" maxx="500299.25" maxy="184857.953125"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000027</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Play_Areas.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>play_areas</Name>
+          <Title>play_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=play_areas"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>play_areas</Name>
+          <Title>play_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=play_areas&amp;style=play_areas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>public_toilets</Name>
+        <Title>public_toilets</Title>
+        <Abstract>Location of Royal Borough of Windsor and Maidenhead maintained public toilets within the borough.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>public_toilets</Keyword>
+          <Keyword>Buildings</Keyword>
+          <Keyword vocabulary="Human Health and Safety">Buildings</Keyword>
+          <Keyword>toilets</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7259133716245388</westBoundLongitude>
+          <eastBoundLongitude>-0.6013813459878609</eastBoundLongitude>
+          <southBoundLatitude>51.40225089760762</southBoundLatitude>
+          <northBoundLatitude>51.55964955282131</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7259133716245388" miny="51.40225089760762" maxx="-0.6013813459878609" maxy="51.55964955282131"/>
+        <BoundingBox CRS="EPSG:27700" minx="488721.84375" miny="167946.015625" maxx="497055.40625" maxy="185304.015625"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000028</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Public_Toilets.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>public_toilets</Name>
+          <Title>public_toilets</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=public_toilets"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>public_toilets</Name>
+          <Title>public_toilets</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=public_toilets&amp;style=public_toilets"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>r19_employment</Name>
+        <Title>r19_employment</Title>
+        <Abstract>Employment areas within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>r19_employment</Keyword>
+          <Keyword>Utility &amp; Government Services</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.76931842943178</westBoundLongitude>
+          <eastBoundLongitude>-0.575167901180158</eastBoundLongitude>
+          <southBoundLatitude>51.399245806437975</southBoundLatitude>
+          <northBoundLatitude>51.53769748149712</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.76931842943178" miny="51.399245806437975" maxx="-0.575167901180158" maxy="51.53769748149712"/>
+        <BoundingBox CRS="EPSG:27700" minx="485706.844000087" miny="167647.530000186" maxx="498921.810000001" maxy="182810.199996842"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000023</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Employment_Sites.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>employment</Name>
+          <Title>employment</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_employment"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>employment</Name>
+          <Title>employment</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_employment&amp;style=employment"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>r19_housing_new</Name>
+        <Title>r19_housing_new</Title>
+        <Abstract>New housing allocation for development within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>r19_housing_new</Keyword>
+          <Keyword>Area Management</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7789340210472874</westBoundLongitude>
+          <eastBoundLongitude>-0.5277656396663835</eastBoundLongitude>
+          <southBoundLatitude>51.38819772125145</southBoundLatitude>
+          <northBoundLatitude>51.55406433537926</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7789340210472874" miny="51.38819772125145" maxx="-0.5277656396663835" maxy="51.55406433537926"/>
+        <BoundingBox CRS="EPSG:27700" minx="485057.19" miny="166482.480669599" maxx="502174.324" maxy="184619.98"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000019</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_New_Housing_Sites.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>new_housing</Name>
+          <Title>new_housing</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_housing_new"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>new_housing</Name>
+          <Title>new_housing</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_housing_new&amp;style=new_housing"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>r19_potentially_developable_sites</Name>
+        <Title>r19_potentially_developable_sites</Title>
+        <Abstract>Potential development sites within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>r19_potentially_developable_sites</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Land Use</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8169863199568868</westBoundLongitude>
+          <eastBoundLongitude>-0.5293615405696439</eastBoundLongitude>
+          <southBoundLatitude>51.39331219198552</southBoundLatitude>
+          <northBoundLatitude>51.54454469809616</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8169863199568868" miny="51.39331219198552" maxx="-0.5293615405696439" maxy="51.54454469809616"/>
+        <BoundingBox CRS="EPSG:27700" minx="-84702.61914736108" miny="-9272.577651805477" maxx="676223.7241900009" maxy="1242876.667023777"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000024</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Small_Development_Sites.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>potential_development</Name>
+          <Title>potential_development</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_potentially_developable_sites"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>potential_development</Name>
+          <Title>potential_development</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=r19_potentially_developable_sites&amp;style=potential_development"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>settlements</Name>
+        <Title>settlements</Title>
+        <Abstract>Towns and villages settlement boundaries within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>settlements</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Area Management</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.8369243610359446</westBoundLongitude>
+          <eastBoundLongitude>-0.5200877208809849</eastBoundLongitude>
+          <southBoundLatitude>51.38156926828379</southBoundLatitude>
+          <northBoundLatitude>51.5679037534382</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.8369243610359446" miny="51.38156926828379" maxx="-0.5200877208809849" maxy="51.5679037534382"/>
+        <BoundingBox CRS="EPSG:27700" minx="481032.898" miny="165755.140005" maxx="502677.05" maxy="186093.680995"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000022</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Settlements.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>settlements</Name>
+          <Title>settlements</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=settlements"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>settlements</Name>
+          <Title>settlements</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=settlements&amp;style=settlements"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>smoke_control_areas</Name>
+        <Title>smoke_control_areas</Title>
+        <Abstract>Areas within the Royal Borough of Windsor and Maidenhead where it is prohibited to emit smoke from a chimney unless exempt.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>smoke_control_areas</Keyword>
+          <Keyword>Atmospheric Conditions</Keyword>
+          <Keyword>Enviroment Monitoring</Keyword>
+          <Keyword>Human Health and Safety</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.6562978162536661</westBoundLongitude>
+          <eastBoundLongitude>-0.6251014664908161</eastBoundLongitude>
+          <southBoundLatitude>51.459042204362646</southBoundLatitude>
+          <northBoundLatitude>51.49039227970633</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.6562978162536661" miny="51.459042204362646" maxx="-0.6251014664908161" maxy="51.49039227970633"/>
+        <BoundingBox CRS="EPSG:27700" minx="493450.36026881" miny="174235.560313017" maxx="495553.650480858" maxy="177684.139170549"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000021</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-RBWM_Smoke_Control_Zones.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>smoke_control_areas</Name>
+          <Title>smoke_control_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=smoke_control_areas"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>smoke_control_areas</Name>
+          <Title>smoke_control_areas</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=smoke_control_areas&amp;style=smoke_control_areas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>village_greens</Name>
+        <Title>village_greens</Title>
+        <Abstract>Areas of land designated as village Greens within the Royal Borough of Windsor and Maidenhead</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>village_greens</Keyword>
+        </KeywordList>
+        <CRS>EPSG:27700</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-0.7949697172068109</westBoundLongitude>
+          <eastBoundLongitude>-0.5401643134482127</eastBoundLongitude>
+          <southBoundLatitude>51.45624946863481</southBoundLatitude>
+          <northBoundLatitude>51.56275335566374</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-0.7949697172068109" miny="51.45624946863481" maxx="-0.5401643134482127" maxy="51.56275335566374"/>
+        <BoundingBox CRS="EPSG:27700" minx="483816.989216844" miny="174035.800113118" maxx="501295.480101844" maxy="185565.946660118"/>
+        <AuthorityURL name="Royal Borough of Windsor and Maidenhead">
+          <OnlineResource xlink:type="simple" xlink:href="https://www3.rbwm.gov.uk/"/>
+        </AuthorityURL>
+        <Identifier authority="Royal Borough of Windsor and Maidenhead">RBWM:000029</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://locationmde.data.gov.uk/metadata-harvesting/b7604054-3122-4f80-8c2f-2a43999af2e8/159-village_greens.xml"/>
+        </MetadataURL>
+        <Style>
+          <Name>village_greens</Name>
+          <Title>village_greens</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=village_greens"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>village_greens</Name>
+          <Title>village_greens</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geodata.rbwm.gov.uk:80/geoserver/wminspire/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=village_greens&amp;style=village_greens"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
