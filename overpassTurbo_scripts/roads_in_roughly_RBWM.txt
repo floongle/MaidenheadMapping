@@ -1,0 +1,13 @@
+[out:xml] [timeout:45] [bbox:51.4,-0.832,51.574,-0.5183] ;
+/* [bbox:south,west,north,east] */
+(
+
+	way["highway"~"trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|residential|unclassified|cycleway"]; /* (newer:"2022-02-20T00:00:00Z") */
+	 
+
+
+);
+(._;>;);
+out body;
+
+/* # -0.832,51.426,-0.494,51.574 */
