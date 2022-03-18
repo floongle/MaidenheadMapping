@@ -1,0 +1,6 @@
+[out:xml] [timeout:25];
+(
+    node["barrier"="cycle_barrier"](around:1500, {{geocodeCoords:Royal Borough of Windsor and Maidenhead}});
+);
+(._;>;);
+out body;

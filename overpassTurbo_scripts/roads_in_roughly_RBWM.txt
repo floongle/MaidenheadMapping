@@ -2,7 +2,7 @@
 /* [bbox:south,west,north,east] */
 (
 
-	way["highway"~"trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|residential|unclassified|cycleway"]; /* (newer:"2022-02-20T00:00:00Z") */
+	way["highway"~"trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|residential|unclassified|cycleway"](newer:"2022-02-20T00:00:00Z"); /* (newer:"2022-02-20T00:00:00Z") */
 	 
 
 
