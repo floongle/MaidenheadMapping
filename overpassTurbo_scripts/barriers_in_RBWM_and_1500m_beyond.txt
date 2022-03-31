@@ -4,3 +4,42 @@
 );
 (._;>;);
 out body;
+
+
+
+////////////
+
+
+[out:xml] [timeout:45] [bbox:51.3,-0.832,51.62,-0.5183] ;
+/* [bbox:south,west,north,east] */
+(
+
+	node["barrier"="cycle_barrier"]; /* (newer:"2022-02-20T00:00:00Z") */
+	 
+
+
+);
+(._;>;);
+out body;
+
+/* # -0.832,51.426,-0.494,51.574 */
+
+
+
+//////////////
+
+
+
+[out:xml] [timeout:45] [bbox:51.3,-0.832,51.62,-0.5183] ;
+/* [bbox:south,west,north,east] */
+(
+
+	node["barrier"="cycle_barrier"];
+	 
+
+
+);
+(._;>;);
+out body;
+
+/* # -0.832,51.426,-0.494,51.574 */
