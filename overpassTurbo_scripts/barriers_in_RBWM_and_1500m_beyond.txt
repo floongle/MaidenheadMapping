@@ -34,7 +34,8 @@ out body;
 /* [bbox:south,west,north,east] */
 (
 
-	node["barrier"="cycle_barrier"];
+	node["barrier"="cycle_barrier];
+	node["barrier"="kissing_gate" and "bicycle" = "yes"];
 	 
 
 
